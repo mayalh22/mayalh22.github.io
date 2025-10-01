@@ -13,7 +13,6 @@
 }
 
 body {
-    margin: 0;
     font-family: 'New Handwriting Font', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--base-font-size);
     line-height: 1.5;
@@ -93,8 +92,8 @@ h2 {
 h3 {
     color: var(--maya-blue);
     font-size: var(--h3-size);
-    margin-top: 0.5em;
-    margin-top: 2rem;
+    margin-top: 2em;
+    margin-bottom: 0.75rem;
 }
 
 .gallery {
@@ -166,7 +165,7 @@ h3 {
 }
 
 #projects h2 {
-    font-size: var(--h2-size)
+    font-size: var(--h2-size);
 }
 
 #projects ul {
