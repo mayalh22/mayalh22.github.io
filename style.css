@@ -85,9 +85,9 @@ h1 {
 }
 
 h2 {
-    color: var(--maya-green);
+    color: var(--maya-pink);
     font-size: var(--h2-size);
-    border-bottom: 2px solid var(--maya-green);
+    border-bottom: 2px solid var(--maya-yellow);
     padding-bottom: 5px;
     margin-top: 0.5em;
 }
@@ -194,7 +194,7 @@ h3 {
 }
 
 #experiences h3 {
-    color: var(--maya-yellow);
+    color: var(--maya-blue);
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 10px;
