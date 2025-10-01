@@ -3,7 +3,6 @@
 <head>
     <title>Maya Hazarika</title>
     <style>
-        /* Color palette variables (user-specified) */
         :root {
             --maya-green: #97c026;
             --maya-blue: #aad3df;
@@ -81,8 +80,6 @@
         ul {
             line-height: 1.6;
         }
-
-        /* Load handwriting font from repo root */
         @font-face {
             font-family: 'New Handwriting Font';
             src: url('newhandwritingfont.ttf') format('truetype');
@@ -125,13 +122,15 @@
         <p>10th grader in Boston!</p>
     </div>
     <div class="nav-buttons">
-        <button onclick="showSection('about')">About Me</button>
-        <button onclick="showSection('contact')">Contact</button>
-        <button onclick="showSection('experiences')">What I Do</button>
-        <button onclick="showSection('art')">My Art</button>
-        <button onclick="showSection('projects')">Projects</button>
-        <button onclick="showSection('writing')">Writing</button>
-        <button onclick="showSection('favorites')">Favorites</button>
+<div class="nav-buttons">
+    <a href="index.html"><button>About Me</button></a>
+    <a href="contact.html"><button>Contact</button></a>
+    <a href="what-i-do.html"><button>What I Do</button></a>
+    <a href="art.html"><button>My Art</button></a>
+    <a href="projects.html"><button>Projects</button></a>
+    <a href="writing.html"><button>Writing</button></a>
+    <a href="favorites.html"><button>Favorites</button></a>
+</div>
     </div>
     <div class="content">
         <div id="about" class="section active">
@@ -139,108 +138,6 @@
             <p>Hi! I'm Maya Hazarika and I'm a tenth grader in greater Boston. I love art, writing, and working on cool projects!</p>
             <p>Welcome to my website :)</p>
         </div>
-        <div id="contact" class="section">
-            <h2>Contact</h2>
-            <p>You can reach me at:</p>
-            <ul>
-                <li><a href="#">Email</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-            </ul>
-        </div>
-        <div id="experiences" class="section">
-            <h2>Things I Do</h2>
-            <h3>Work</h3>
-            <p>I work at Mathnasium about 8 hours a week and I babysit sometimes</p>
-            <h3>Volunteering</h3>
-            <ul>
-                <li>Museum of Science in gallery learning every week</li>
-                <li>Library of Congress online</li>
-                <li>Smithsonian online</li>
-                <li>100+ hours for Key Club</li>
-            </ul>
-            <h3>School Clubs</h3>
-            <p>DECA, Key Club, Ceramics, Model UN, Quiz Bowl</p>
-            <h3>Summer Stuff</h3>
-            <ul>
-                <li>2025 - EDW at MIT, Harvard Academies</li>
-                <li>2024 - Artemis at BU, 360 Squash, Fessenden Squash</li>
-                <li>2023 - Weston Drama Workshop</li>
-                <li>2022 - ECO Camp Wellesley, Linx</li>
-            </ul>
-        </div>
-        <div id="art" class="section">
-            <h2>My Art</h2>
-            <h3>Ceramics</h3>
-            <div class="gallery">
-                <img src="https://placehold.co/150x150/fea29b/000000?text=Ceramic+1" alt="Ceramic 1">
-                <img src="https://placehold.co/150x150/fea29b/000000?text=Ceramic+2" alt="Ceramic 2">
-                <img src="https://placehold.co/150x150/fea29b/000000?text=Ceramic+3" alt="Ceramic 3">
-            </div>
-            <h3>Paintings</h3>
-            <div class="gallery">
-                <img src="https://placehold.co/150x150/aad3df/000000?text=Painting+1" alt="Painting 1">
-                <img src="https://placehold.co/150x150/aad3df/000000?text=Painting+2" alt="Painting 2">
-                <img src="https://placehold.co/150x150/aad3df/000000?text=Painting+3" alt="Painting 3">
-            </div>
-        </div>
-        <div id="projects" class="section">
-            <h2>My Projects</h2>
-            <ul>
-                <li>Electronic game table</li>
-                <li>Digital dashboard</li>
-                <li>Chemistry tips</li>
-                <li>Various python projects</li>
-                <li>Timer</li>
-            </ul>
-        </div>
-        <div id="writing" class="section">
-            <h2>Creative Writing</h2>
-            <p>I write a lot of poetry! Here are some of my favorite pieces:</p>
-            <ul>
-                <li><a href="#">Poem 1</a></li>
-                <li><a href="#">Poem 2</a></li>
-                <li><a href="#">Short Story 1</a></li>
-            </ul>   
-            <h3>Published Writing</h3>
-            <ul>
-                <li><a href="#">Swellesley Article</a></li>
-                <li><a href="#">Medium Post</a></li>
-                <li><a href="#">Substack Article</a></li>
-            </ul>
-        </div>
-        <div id="favorites" class="section">
-            <h2>My Favorites</h2>     
-            <h3>Books I Love</h3>
-            <div class="gallery">
-                <img src="https://placehold.co/120x180/fdf178/000000?text=Book+1" alt="Book 1">
-                <img src="https://placehold.co/120x180/fdf178/000000?text=Book+2" alt="Book 2">
-                <img src="https://placehold.co/120x180/fdf178/000000?text=Book+3" alt="Book 3">
-            </div>
-            
-            <h3>Music</h3>
-            <div class="gallery">
-                <img src="https://placehold.co/150x150/97c026/000000?text=Song+1" alt="Song 1">
-                <img src="https://placehold.co/150x150/97c026/000000?text=Song+2" alt="Song 2">
-                <img src="https://placehold.co/150x150/97c026/000000?text=Song+3" alt="Song 3">
-            </div>         
-            <h3>Movies</h3>
-            <div class="gallery">
-                <img src="https://placehold.co/120x180/ff9863/000000?text=Movie+1" alt="Movie 1">
-                <img src="https://placehold.co/120x180/ff9863/000000?text=Movie+2" alt="Movie 2">
-                <img src="https://placehold.co/120x180/ff9863/000000?text=Movie+3" alt="Movie 3">
-            </div>
-        </div>
     </div>
-    <script>
-        function showSection(sectionId) {
-            var sections = document.getElementsByClassName('section');
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].classList.remove('active');
-            }
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
 </body>
 </html>
