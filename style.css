@@ -1,5 +1,3 @@
-
-
 :root {
     --maya-green: #97c026;
     --maya-blue: #aad3df;
@@ -13,15 +11,18 @@
     --h2-size: 1.75rem;
     --h3-size: 1.25rem;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 @media (max-width: 600px) {
-  .nav-buttons {
-    display: flex;
-    flex-direction: column;
-  }
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
 body {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--base-font-size);
@@ -112,15 +113,18 @@ h3 {
     gap: 10px;
     overflow-x: auto;
     padding: 10px 0;
-    scrollbar-width: thin; 
+    scrollbar-width: thin;
 }
+
 .gallery::-webkit-scrollbar {
-    height: 8px; 
+    height: 8px;
 }
+
 .gallery::-webkit-scrollbar-thumb {
     background-color: var(--maya-blue);
     border-radius: 10px;
 }
+
 .gallery img {
     width: 150px;
     height: 150px;
@@ -135,7 +139,7 @@ h3 {
     padding: 20px;
     background-color: var(--maya-white);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #contact h2 {
@@ -169,6 +173,7 @@ h3 {
     color: var(--maya-orange);
     text-decoration: underline;
 }
+
 #projects {
     max-width: 800px;
     margin: 20px auto;
@@ -183,6 +188,7 @@ h3 {
     list-style-type: disc;
     color: var(--maya-dark);
 }
+
 #experiences {
     max-width: 800px;
     margin: 20px auto;
@@ -208,7 +214,7 @@ h3 {
     margin-bottom: 10px;
 }
 
-#experiences p, 
+#experiences p,
 #experiences ul {
     font-size: 1.1rem;
     margin-bottom: 15px;
@@ -228,6 +234,7 @@ h3 {
     cursor: default;
     filter: none;
 }
+
 #writing ul li a {
     color: var(--maya-pink);
     text-decoration: none;
