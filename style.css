@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'New Handwriting Font', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--base-font-size);
     line-height: 1.5;
     margin: 0;
