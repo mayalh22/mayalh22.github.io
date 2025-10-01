@@ -10,3 +10,26 @@
     border-radius: 5px;
     flex-shrink: 0;
 }
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: thin; 
+}
+.gallery::-webkit-scrollbar {
+    height: 8px; 
+}
+.gallery::-webkit-scrollbar-thumb {
+    background-color: var(--maya-blue, #aad3df);
+    border-radius: 10px;
+}
