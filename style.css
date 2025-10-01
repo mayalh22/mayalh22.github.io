@@ -20,6 +20,7 @@ body {
     background: var(--maya-white);
     color: var(--maya-dark);
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @font-face {
     font-family: 'New Handwriting Font';
