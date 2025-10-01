@@ -225,6 +225,7 @@ h3 {
     font-size: 1.1rem;
     position: relative;
     display: inline-block;
+    padding-bottom: 3px;
     transition: color 0.3s ease;
 }
 
@@ -233,10 +234,11 @@ h3 {
     position: absolute;
     width: 0%;
     height: 2px;
-    bottom: -2px;
+    bottom: 0px;
     left: 0;
     background-color: var(--maya-orange);
     transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
 #writing ul li a:hover::after {
@@ -244,5 +246,6 @@ h3 {
 }
 
 #writing ul li a:hover {
+    text-decoration: none;
     color: var(--maya-orange);
 }
