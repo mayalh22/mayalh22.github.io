@@ -218,3 +218,31 @@ h3 {
     cursor: default;
     filter: none;
 }
+#writing ul li a {
+    color: var(--maya-pink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+#writing ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--maya-orange);
+    transition: width 0.3s ease;
+}
+
+#writing ul li a:hover::after {
+    width: 100%;
+}
+
+#writing ul li a:hover {
+    color: var(--maya-orange);
+}
