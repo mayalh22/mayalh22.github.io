@@ -12,6 +12,10 @@
             --maya-yellow: #fdf178;
             --maya-dark: #434343;
             --maya-white: #ffffff;
+            --base-font-size: 18px;
+            --h1-size: 2.75rem;
+            --h2-size: 1.75rem;
+            --h3-size: 1.25rem;
         }
         body {
             font-family: Arial, sans-serif;
@@ -89,21 +93,29 @@
 
         body {
             font-family: 'New Handwriting Font', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: var(--base-font-size);
+            line-height: 1.5;
         }
         a:hover {
             text-decoration: underline;
         }
-        .gallery {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding: 10px 0;
+        h1 {
+            color: var(--maya-pink);
+            font-size: var(--h1-size);
+            margin: 0 0 0.25em 0;
+            line-height: 1.1;
         }
-        .gallery img {
-            width: 150px;
-            height: 150px;
-            border-radius: 5px;
-            flex-shrink: 0;
+        h2 {
+            color: var(--maya-green);
+            font-size: var(--h2-size);
+            border-bottom: 2px solid var(--maya-green);
+            padding-bottom: 5px;
+            margin-top: 0.5em;
+        }
+        h3 {
+            color: var(--maya-blue);
+            font-size: var(--h3-size);
+            margin-top: 0.5em;
         }
     </style>
 </head>
