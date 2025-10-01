@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 
 :root {
     --maya-green: #97c026;
@@ -189,12 +189,12 @@ h3 {
 #experiences h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--maya-green);
+    border-bottom: 2px solid var(--maya-blue);
     padding-bottom: 5px;
 }
 
 #experiences h3 {
-    color: var(--maya-blue);
+    color: var(--maya-yellow);
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -219,4 +219,35 @@ h3 {
     color: var(--maya-white);
     cursor: default;
     filter: none;
+}
+#writing ul li a {
+    color: var(--maya-pink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+#writing ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--maya-orange);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+#writing ul li a:hover::after {
+    width: 100%;
+}
+
+#writing ul li a:hover {
+    text-decoration: none;
+    color: var(--maya-orange);
 }
