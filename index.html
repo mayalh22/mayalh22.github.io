@@ -77,9 +77,18 @@
         ul {
             line-height: 1.6;
         }
-        a {
-            color: var(--maya-pink);
-            text-decoration: none;
+
+        /* Load handwriting font from repo root */
+        @font-face {
+            font-family: 'New Handwriting Font';
+            src: url('newhandwritingfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'New Handwriting Font', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
         a:hover {
             text-decoration: underline;
