@@ -92,3 +92,42 @@ h3 {
     line-height: 1.6;
     color: #434343;
 }
+#experiences {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #434343;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#experiences h2 {
+    color: #97c026;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #97c026;
+    padding-bottom: 5px;
+}
+
+#experiences h3 {
+    color: #aad3df;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#experiences p, 
+#experiences ul {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+#experiences ul {
+    padding-left: 20px;
+}
+
+#experiences ul li {
+    margin-bottom: 6px;
+}
