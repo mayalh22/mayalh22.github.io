@@ -210,3 +210,10 @@ h3 {
 #experiences ul li {
     margin-bottom: 6px;
 }
+
+.nav-buttons button.active {
+    background-color: var(--maya-pink);
+    color: var(--maya-white);
+    cursor: default;
+    filter: none;
+}
