@@ -1,3 +1,98 @@
+:root {
+    --maya-green: #97c026;
+    --maya-blue: #aad3df;
+    --maya-pink: #fea29b;
+    --maya-orange: #ff9863;
+    --maya-yellow: #fdf178;
+    --maya-dark: #434343;
+    --maya-white: #ffffff;
+    --base-font-size: 18px;
+    --h1-size: 2.75rem;
+    --h2-size: 1.75rem;
+    --h3-size: 1.25rem;
+}
+
+body {
+    font-family: 'New Handwriting Font', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--base-font-size);
+    line-height: 1.5;
+    margin: 0;
+    background: var(--maya-white);
+    color: var(--maya-dark);
+}
+
+@font-face {
+    font-family: 'New Handwriting Font';
+    src: url('newhandwritingfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.header {
+    text-align: center;
+    background-color: var(--maya-pink);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-buttons button {
+    background-color: var(--maya-blue);
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: filter 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    filter: brightness(0.95);
+}
+
+.content {
+    background-color: var(--maya-white);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+ul {
+    line-height: 1.6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: var(--maya-pink);
+    font-size: var(--h1-size);
+    margin: 0 0 0.25em 0;
+    line-height: 1.1;
+}
+
+h2 {
+    color: var(--maya-green);
+    font-size: var(--h2-size);
+    border-bottom: 2px solid var(--maya-green);
+    padding-bottom: 5px;
+    margin-top: 0.5em;
+}
+
+h3 {
+    color: var(--maya-blue);
+    font-size: var(--h3-size);
+    margin-top: 0.5em;
+}
 
 .gallery {
     display: flex;
