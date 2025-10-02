@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius:wght@400;700&family=SUSE+Mono:wght@400;700&display=swap');
+
 :root {
     --maya-green: #97c026;
     --maya-blue: #aad3df;
@@ -12,7 +14,6 @@
     --h3-size: 1.25rem;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Delius:wght@400;700&family=SUSE+Mono:wght@400;700&display=swap');
 
 @keyframes paperLift {
     0% {
