@@ -5,7 +5,7 @@
   --maya-blue: #aad3df;
   --maya-pink: #fea29b;
   --maya-orange: #ff9863;
-  --maya-yellow: #fdf178;
+  --maya-yellow: #f5dc79;
   --maya-dark: #434343;
   --maya-white: #ffffff;
 
@@ -164,7 +164,7 @@ ul {
 }
 
 .content-box {
-  background-color: var(--maya-yellow);
+  background-color: var(--maya-orange);
   border-radius: 10px;
   padding: 30px 20px;
   margin: 20px auto;
