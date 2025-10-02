@@ -37,12 +37,18 @@ function setupFloatingIcons() {
         img.alt = '';
         iconsContainer.appendChild(img);
     }
-    const headerWrapper = document.querySelector('.header-area');
-    if (headerWrapper) {
+    // Prefer a dedicated header container; try multiple common selectors.
+    const headerWrapper = document.querySelector('.header-area')
+        || document.querySelector('#header')
+        || document.querySelector('header')
+        || document.getElementById('header-container');
+
+    if (headerWrapper && typeof headerWrapper.appendChild === 'function') {
         headerWrapper.appendChild(iconsContainer);
     } else {
-        document.body.appendChild(iconsContainer);
-        console.error('Could not find .header-area to attach icons.');
+        // Do not append to body. Icons must stay in the header only.
+        // Log a warning for debugging if the header element isn't present.
+        console.warn('Could not find a header element to attach icons; icons were not added.');
     }
 }
 function setupIconInteractions() {
