@@ -394,10 +394,10 @@ h3 {
     z-index: 1;
 }
 .content-box {
-  background-color: var(--maya-white); /* Or any other color */
+  background-color: var(--maya-yellow);
   border-radius: 10px;
   padding: 30px 20px;
   margin: 20px auto;
   max-width: 900px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); /* Optional, for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
