@@ -209,6 +209,23 @@ ul {
   }
 }
 
+/* When there is no avatar, keep the about section as a single column
+   so the bio fills the card rather than splitting into two columns. */
+.about-grid.about-no-avatar,
+.about-no-avatar.about-grid {
+  grid-template-columns: 1fr !important;
+}
+
+.about-no-avatar .about-card {
+  max-width: 100%;
+}
+
+.about-no-avatar .about-bio {
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+}
+
 /* white card behind about content */
 .about-card {
   background: var(--maya-white);
