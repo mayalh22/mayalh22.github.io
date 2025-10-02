@@ -8,6 +8,10 @@ async function init() {
         highlightActiveNav();
         setupFloatingIcons();
         setupIconInteractions();
+        // update footer year
+        const y = new Date().getFullYear();
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = y;
     } catch (err) {
         console.error('Header load error:', err);
     }
