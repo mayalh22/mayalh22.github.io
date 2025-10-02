@@ -1,3 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius:wght@400;700&family=SUSE+Mono:wght@400;700&display=swap');
+
+:root {
+  --maya-green: #97c026;
+  --maya-blue: #aad3df;
+  --maya-pink: #fea29b;
+  --maya-orange: #ff9863;
+  --maya-yellow: #f5dc79;
+  --maya-dark: #434343;
+  --maya-white: #ffffff;
+
+  --base-font-size: 18px;
+  --h1-size: 2.75rem;
+  --h2-size: 1.75rem;
+  --h3-size: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'SUSE Mono';
+  font-size: var(--base-font-size);
+  line-height: 1.5;
+  margin: 0;
+  background: var(--maya-white);
+  color: var(--maya-dark);
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: var(--maya-white) url('assets/shared/dots.png') repeat;
+  mix-blend-mode: multiply;
+  animation: floatSlow 22s ease-in-out both;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button:focus,
+a:focus,
+.gallery img:focus {
+  outline: 3px dashed rgba(170, 211, 223, 0.45);
+  outline-offset: 4px;
+}
+
+h1,
+h2,
+h3,
+.header,
+.nav-buttons a,
+#writing ul li a {
+  font-family: 'Delius';
+}
+
+h1 {
+  color: var(--maya-dark);
+  font-size: var(--h1-size);
+  margin: 0 0 0.25em 0;
+  line-height: 1.1;
+}
+
+h2 {
+  color: var(--maya-pink);
+  font-size: var(--h2-size);
+  border-bottom: 2px solid var(--maya-yellow);
+  padding-bottom: 5px;
+  margin-top: 0.5em;
+}
+
+h3 {
+  color: var(--maya-blue);
+  font-size: var(--h3-size);
+  margin-top: 2em;
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav-buttons a {
+  background-color: var(--maya-blue);
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 90ms linear, filter 200ms ease;
+  will-change: transform;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+
+.nav-buttons a:hover {
+  transform: rotate(-1deg);
+}
+
+.nav-buttons a:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.nav-buttons a.active {
+  background-color: var(--maya-pink);
+  color: var(--maya-white);
+  cursor: default;
+  filter: none;
+}
+
+@media (max-width: 600px) {
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.content-box:hover .content>div.section,
+.content-box:hover .content>#contact,
+.content-box:hover .content>#projects,
+.content-box:hover .content>#experiences,
+.content-box:hover .content>#writing {
+  background-color: var(--maya-white);
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 20px;
+  transform: translateY(6px) rotate(-0.4deg) skewX(-0.12deg);
+  animation: paperLift 650ms cubic-bezier(.2, .8, .25, 1) both;
+
+}
+
+.content-box {
+  background-color: var(--maya-green);
+  border-radius: 10px;
+  padding: 30px 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+/* About grid: avatar + bio */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.about-no-avatar .about-bio {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.about-bio h2 {
+  margin-top: 0;
+  position: relative;
+}
+
+.about-bio h2::after {
+  /* subtle washi-like underline using a soft gradient */
+  content: '';
+  display: block;
+  height: 8px;
+  width: 70px;
+  background: linear-gradient(90deg, rgba(245,220,121,0.95), rgba(255,152,99,0.9));
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--maya-dark);
+}
+
+.about-bio p {
+  margin: 0 0 0.9rem 0;
+}
+
+.about-bio .cta a {
+  background: var(--maya-blue);
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--maya-dark);
+  text-decoration: none;
+  margin-right: 6px;
+}
+
+@media (min-width: 721px) {
+  .about-grid {
+    grid-template-columns: 1fr 560px;
+    align-items: center;
+  }
+  .about-bio {
+    padding-left: 12px;
+  }
+}
+
+/* When there is no avatar, keep the about section as a single column
+   so the bio fills the card rather than splitting into two columns. */
+.about-grid.about-no-avatar,
+.about-no-avatar.about-grid {
+  grid-template-columns: 1fr !important;
+}
+
+.about-no-avatar .about-card {
+  max-width: 100%;
+}
+
+.about-no-avatar .about-bio {
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* white card behind about content */
+.about-card {
+  background: var(--maya-white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transform: rotate(-0.6deg) translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Accessibility: visible skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 8px 10px;
+  background: var(--maya-yellow);
+  color: var(--maya-dark);
+  border-radius: 4px;
+  z-index: 9999;
+}
+
+.header {
+  animation: headerFloat 680ms cubic-bezier(0.22, 0.9, 0.3, 1) both;
+  background-color: var(--maya-blue);
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Delius';
+  color: var(--maya-dark);
+  border-bottom: 2px solid var(--maya-yellow);
+  position: relative;
+  z-index: 1;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: thin;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: var(--maya-blue);
+  border-radius: 10px;
+}
+
+.gallery img {
+  /* fixed thumbnail width but preserve original aspect ratio (no cropping) */
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+  flex-shrink: 0;
+  object-fit: contain;
+  background-color: #fff; /* subtle background for non-square images */
+  transition: transform 180ms cubic-bezier(.2, .8, .2, 1);
+  will-change: transform;
+}
+
+.gallery img:hover,
+.gallery img:focus {
+  transform: rotate(-0.6deg) translateY(-4px);
+}
+
+/* Responsive/content images: keep full image visible and preserve aspect ratio */
+.content img,
+.content-box img,
+.gallery img,
+img.responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#contact {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--maya-white);
+  border-radius: 10px;
+  border: 1px dashed rgba(170, 211, 223, 0.35);
+}
+
+#contact h2 {
+  margin-bottom: 15px;
+}
+
+#contact p {
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
@@ -105,6 +440,11 @@
   width: 100%;
 }
 
+#writing ul li a:hover {
+  text-decoration: none;
+  color: var(--maya-orange);
+}
+
 @keyframes floatSlow {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -198,8 +538,16 @@
 }
 
 /* container for decorative icons positioned around the header text */
-.floating-icons{position:absolute;inset:0;pointer-events:none}
-.floating-icons .decor-icon{pointer-events:auto;position:absolute}
+.floating-icons {
+  position: absolute;
+  inset: 0; /* fill the header container */
+  pointer-events: none; /* allow clicks to pass through except icons themselves */
+}
+
+.floating-icons .decor-icon {
+  pointer-events: auto; /* allow hover and click on icons */
+  position: absolute;
+}
 
 @keyframes float {
   0% {
@@ -286,4 +634,10 @@ footer {
   cursor: pointer;
 }
 
-img:not(.decor-icon){max-width:100%;height:auto;object-fit:contain;display:block}
+/* Ensure content images are shown fully (no cropping/zoom). Exclude decorative icons. */
+img:not(.decor-icon) {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
