@@ -4,13 +4,14 @@ hello! my name is maya and this is my portfolio/personal website
 
 i intend to use it as a sort or resume/diary of all my projects and interests
 
-i am now a bit into the project but so far:
+the main sections are about me, contact, experiences, my art, projects, writing, and favorites
 
-- there is 6 separate tabs/folders which each have thier own html file
-- i have a 404 page in case of issues
-- uploaded assets for my favorite books, movies, and albums
-- added a lot of css with a color scheme
+each section had its own page, linked through buttons at the top
 
-i am planning on adding some more js for functions, i still need to upload a decent amount of images, and i want to focus on interactiveness as well
+the background is white with light gray dots for texture, color palette incluedes soft greens, blues, oranges, yellows, whites and pink
+
+i tried to make it feel very analogy scrapbook-y and non digital
+
+feel free to explore the pages and learn more about me and my interests. the site is simple and responsive, so it should work well on both desktop and mobile
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
