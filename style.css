@@ -434,6 +434,9 @@ img.responsive {
   background-color: var(--maya-orange);
   border-radius: 2px;
   transition: width 0.3s ease;
+.decor-icon.pressed {
+  transform: scale(1.28);
+}
 }
 
 #writing ul li a:hover::after {
