@@ -155,28 +155,39 @@ ul {
 /* About grid: avatar + bio */
 .about-grid {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 18px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
-.about-avatar img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--maya-white);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  display: block;
+.about-no-avatar .about-bio {
+  max-width: 780px;
   margin: 0 auto;
 }
 
 .about-bio h2 {
   margin-top: 0;
+  position: relative;
+}
+
+.about-bio h2::after {
+  /* subtle washi-like underline using a soft gradient */
+  content: '';
+  display: block;
+  height: 8px;
+  width: 70px;
+  background: linear-gradient(90deg, rgba(245,220,121,0.95), rgba(255,152,99,0.9));
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--maya-dark);
 }
 
 .about-bio p {
-  margin: 0 0 0.85rem 0;
+  margin: 0 0 0.9rem 0;
 }
 
 .about-bio .cta a {
@@ -188,15 +199,13 @@ ul {
   margin-right: 6px;
 }
 
-@media (max-width: 720px) {
+@media (min-width: 721px) {
   .about-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
+    grid-template-columns: 1fr 560px;
+    align-items: center;
   }
-
-  .about-avatar img {
-    width: 110px;
-    height: 110px;
+  .about-bio {
+    padding-left: 12px;
   }
 }
 
