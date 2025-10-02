@@ -14,9 +14,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Delius:wght@400;700&family=SUSE+Mono:wght@400;700&display=swap');
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
+@keyframes paperLift {
+    0% { transform: translateY(10px) rotate(-1deg) skewX(-0.4deg); }
+    60% { transform: translateY(-4px) rotate(0.6deg) skewX(0.2deg); }
+    100% { transform: translateY(0) rotate(0deg) skewX(0deg); }
 }
 
 @keyframes floatSlow {
@@ -25,9 +26,10 @@
     100% { transform: translateY(0); }
 }
 
-@keyframes headerSlide {
-    from { opacity: 0; transform: translateY(-12px) scale(0.99); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+@keyframes headerFloat {
+    0% { transform: translateY(-10px) rotate(-1.2deg); }
+    55% { transform: translateY(6px) rotate(0.8deg); }
+    100% { transform: translateY(0) rotate(0deg); }
 }
 
 body::after {
@@ -68,7 +70,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    animation: headerSlide 700ms ease-out both;
+    animation: headerFloat 700ms cubic-bezier(.25,.9,.25,1) both;
 }
 
 .nav-buttons {
@@ -89,8 +91,7 @@ body {
 }
 
 .nav-buttons button:hover {
-    filter: brightness(0.95);
-    transform: translateY(-3px) scale(1.03);
+    transform: translateY(-2px) rotate(-1.4deg) scale(1.01);
 }
 
 .nav-buttons button:active {
@@ -130,9 +131,8 @@ h1, h2, h3, .header, .nav-buttons button, #writing ul li a {
 #projects,
 #experiences,
 #contact {
-    opacity: 0;
-    transform: translateY(6px);
-    animation: fadeInUp 1200ms ease-out both;
+    transform: translateY(6px) rotate(-0.6deg) skewX(-0.2deg);
+    animation: paperLift 900ms cubic-bezier(.2,.8,.25,1) both;
 }
 
 .section:nth-of-type(1), .content:nth-of-type(1) { animation-delay: 80ms; }
@@ -140,22 +140,21 @@ h1, h2, h3, .header, .nav-buttons button, #writing ul li a {
 .section:nth-of-type(3), .content:nth-of-type(3) { animation-delay: 240ms; }
 
 .gallery img {
-    transition: transform 280ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, filter 200ms ease;
+    transition: transform 260ms cubic-bezier(.2,.8,.2,1);
     will-change: transform;
 }
 
 .gallery img:hover,
 .gallery img:focus {
-    transform: translateY(-6px) scale(1.04);
-    box-shadow: 0 8px 20px rgba(67,67,67,0.12);
-    filter: saturate(1.05) contrast(1.02);
+    transform: translateY(-6px) rotate(-1.8deg) scale(1.02);
     outline: none;
 }
 
 button:focus,
 a:focus,
 .gallery img:focus {
-    box-shadow: 0 0 0 3px rgba(153, 211, 220, 0.3);
+    outline: 3px dashed rgba(170,211,223,0.45);
+    outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -211,7 +210,8 @@ h3 {
     padding: 20px;
     background-color: var(--maya-white);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* swap digital shadow for a tactile dashed border (washi tape vibe) */
+    border: 1px dashed rgba(170,211,223,0.35);
 }
 
 #contact h2 {
