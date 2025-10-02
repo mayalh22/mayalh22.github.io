@@ -17,12 +17,12 @@ function highlightActiveNav() {
     const navButtons = document.querySelectorAll('.nav-buttons a');
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    navButtons.forEach(linkElement => { // Renamed 'button' to 'linkElement' for clarity
-        const link = linkElement.getAttribute('href'); // CHANGE: Get 'href' from the linkElement itself
+    navButtons.forEach(linkElement => {
+        const link = linkElement.getAttribute('href');
         if (link === currentPage) {
-            linkElement.classList.add('active'); // CHANGE: Use 'linkElement'
+            linkElement.classList.add('active');
         } else {
-            linkElement.classList.remove('active'); // CHANGE: Use 'linkElement'
+            linkElement.classList.remove('active');
         }
     });
 }
@@ -37,13 +37,13 @@ function setupFloatingIcons() {
         img.alt = '';
         iconsContainer.appendChild(img);
     }
-    const headerWrapper = document.querySelector('.header-area'); 
+    const headerWrapper = document.querySelector('.header-area');
     if (headerWrapper) {
         headerWrapper.appendChild(iconsContainer);
     } else {
-        document.body.appendChild(iconsContainer); 
-        console.error("Could not find .header-area to attach icons.");
-}
+        document.body.appendChild(iconsContainer);
+        console.error('Could not find .header-area to attach icons.');
+    }
 }
 function setupIconInteractions() {
     const icons = document.querySelectorAll('.decor-icon');

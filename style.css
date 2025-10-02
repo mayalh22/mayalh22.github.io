@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'SUSE Mono', monospace;
+  font-family: 'SUSE Mono';
   font-size: var(--base-font-size);
   line-height: 1.5;
   margin: 0;
@@ -56,7 +56,7 @@ h3,
 .header,
 .nav-buttons a,
 #writing ul li a {
-  font-family: 'Delius', cursive;
+  font-family: 'Delius';
 }
 
 h1 {
@@ -157,7 +157,7 @@ ul {
   background-color: var(--maya-blue);
   padding: 30px 20px;
   text-align: center;
-  font-family: 'Delius', cursive;
+  font-family: 'Delius';
   color: var(--maya-dark);
   border-bottom: 2px solid var(--maya-yellow);
   position: relative;
@@ -397,10 +397,18 @@ ul {
 
 .decor-icon {
   position: absolute;
-  width: 80px;
-  opacity: 0.9;
-  animation: float 12s ease-in-out infinite alternate;
+  width: 60px;
+  height: 60px;
+  opacity: 0.95;
+  pointer-events: auto;
+  transform-origin: center;
+  /* static by default to reduce motion; hover gives a small spin */
   z-index: 1;
+}
+
+/* on hover, give a tiny spin once for tactile feedback */
+.decor-icon:hover {
+  animation: spin 420ms ease both;
 }
 
 .header-area {
@@ -424,7 +432,7 @@ footer {
   text-align: center;
   padding: 15px;
   border-top: 2px solid var(--maya-pink);
-  font-family: 'Delius', cursive;
+  font-family: 'Delius';
   font-size: 0.95rem;
 }
 
@@ -488,11 +496,7 @@ footer {
 }
 
 .decor-icon {
-  position: absolute;
   width: 60px;
-  opacity: 0.9;
-  animation: float 10s ease-in-out infinite alternate;
-  z-index: 1;
 }
 
 .decor-icon:hover {
