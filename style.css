@@ -54,7 +54,7 @@ h1,
 h2,
 h3,
 .header,
-.nav-buttons button,
+.nav-buttons a,
 #writing ul li a {
   font-family: 'Delius', cursive;
 }
@@ -91,7 +91,7 @@ ul {
   margin-bottom: 20px;
 }
 
-.nav-buttons button {
+.nav-buttons a {
   background-color: var(--maya-blue);
   border: none;
   padding: 10px 15px;
@@ -101,17 +101,21 @@ ul {
   font-size: 14px;
   transition: transform 90ms linear, filter 200ms ease;
   will-change: transform;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
-.nav-buttons button:hover {
+
+.nav-buttons a:hover {
   transform: rotate(-1deg);
 }
 
-.nav-buttons button:active {
+.nav-buttons a:active {
   transform: translateY(0) scale(0.99);
 }
 
-.nav-buttons button.active {
+.nav-buttons a.active {
   background-color: var(--maya-pink);
   color: var(--maya-white);
   cursor: default;
@@ -224,7 +228,7 @@ ul {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  transition: none;
+  transition: color 0.3s ease;
 }
 
 #contact ul li a:hover,
@@ -306,6 +310,7 @@ ul {
   left: 0;
   background-color: var(--maya-orange);
   border-radius: 2px;
+  transition: width 0.3s ease;
 }
 
 #writing ul li a:hover::after {

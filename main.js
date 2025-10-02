@@ -7,29 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(html => {
             document.getElementById('header-container').innerHTML = html;
             highlightActiveNav();
-            setupFloatingIcons(); 
-            setupIconInteractions(); 
+            setupFloatingIcons();
+            setupIconInteractions();
         })
         .catch(err => console.error('Header load error:', err));
 });
 
 function highlightActiveNav() {
-    const navButtons = document.querySelectorAll('.nav-buttons a button');
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html'; 
+    const navButtons = document.querySelectorAll('.nav-buttons a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    navButtons.forEach(button => {
-        const link = button.parentElement.getAttribute('href');
+    navButtons.forEach(linkElement => { // Renamed 'button' to 'linkElement' for clarity
+        const link = linkElement.getAttribute('href'); // CHANGE: Get 'href' from the linkElement itself
         if (link === currentPage) {
-            button.classList.add('active');
+            linkElement.classList.add('active'); // CHANGE: Use 'linkElement'
         } else {
-            button.classList.remove('active');
+            linkElement.classList.remove('active'); // CHANGE: Use 'linkElement'
         }
     });
 }
-
 function setupFloatingIcons() {
     const iconsContainer = document.createElement('div');
-    iconsContainer.classList.add('floating-icons'); 
+    iconsContainer.classList.add('floating-icons');
 
     for (let i = 1; i <= 10; i++) {
         const img = document.createElement('img');
@@ -45,7 +44,7 @@ function setupIconInteractions() {
     const icons = document.querySelectorAll('.decor-icon');
 
     icons.forEach(icon => {
-        
+
         icon.addEventListener('click', () => {
             icon.style.transition = 'transform 200ms ease';
             icon.style.transform = 'scale(1.3)';
