@@ -145,7 +145,7 @@ ul {
 }
 
 .content-box {
-  background-color: var(--maya-orange);
+  background-color: var(--maya-green);
   border-radius: 10px;
   padding: 30px 20px;
   margin: 20px auto;
@@ -154,12 +154,12 @@ ul {
 
 .header {
   animation: headerFloat 680ms cubic-bezier(0.22, 0.9, 0.3, 1) both;
-  background-color: var(--maya-green);
+  background-color: var(--maya-blue);
   padding: 30px 20px;
   text-align: center;
   font-family: 'Delius', cursive;
   color: var(--maya-dark);
-  border-bottom: 2px solid var(--maya-blue);
+  border-bottom: 2px solid var(--maya-yellow);
   position: relative;
   z-index: 1;
 }
