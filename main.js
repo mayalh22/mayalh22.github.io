@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.error('Header load error:', err));
 });
-
 function highlightActiveNav() {
     const navButtons = document.querySelectorAll('.nav-buttons a');
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -29,7 +28,6 @@ function highlightActiveNav() {
 function setupFloatingIcons() {
     const iconsContainer = document.createElement('div');
     iconsContainer.classList.add('floating-icons');
-
     for (let i = 1; i <= 10; i++) {
         const img = document.createElement('img');
         img.src = `assets/shared/icon${i}.png`;
@@ -37,29 +35,21 @@ function setupFloatingIcons() {
         img.alt = '';
         iconsContainer.appendChild(img);
     }
-    // Prefer a dedicated header container; try multiple common selectors.
     const headerWrapper = document.querySelector('.header-area')
         || document.querySelector('#header')
         || document.querySelector('header')
         || document.getElementById('header-container');
-
-    // Prefer to attach icons to the inner .header element (which contains the H1 and subtitle)
     const headerTarget = headerWrapper ? headerWrapper.querySelector('.header') : null;
-
     const attachTarget = headerTarget || headerWrapper;
-
     if (attachTarget && typeof attachTarget.appendChild === 'function') {
         attachTarget.appendChild(iconsContainer);
     } else {
-        // Do not append to body. Icons must stay in the header only.
         console.warn('Could not find a header element to attach icons; icons were not added.');
     }
 }
 function setupIconInteractions() {
     const icons = document.querySelectorAll('.decor-icon');
-
     icons.forEach(icon => {
-
         icon.addEventListener('click', () => {
             icon.style.transition = 'transform 200ms ease';
             icon.style.transform = 'scale(1.3)';
