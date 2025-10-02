@@ -47,3 +47,30 @@ function setupIconInteractions() {
     });
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Load header.html as before
+  fetch('header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-container').innerHTML = html;
+
+      // Your existing nav active button code here...
+
+      // Inject floating icons dynamically
+      const iconsContainer = document.createElement('div');
+      iconsContainer.classList.add('floating-icons');
+
+      // You can generate the icon elements programmatically:
+      for (let i = 1; i <= 10; i++) {
+        const img = document.createElement('img');
+        img.src = `assets/shared/icon${i}.png`;
+        img.classList.add('decor-icon', `icon${i}`);
+        img.alt = ''; // empty alt if decorative
+        iconsContainer.appendChild(img);
+      }
+
+      document.body.appendChild(iconsContainer);
+    })
+    .catch(err => console.error('Error loading header:', err));
+});
