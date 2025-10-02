@@ -19,7 +19,7 @@ body::after {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: var(--maya-white) url('/path/to/dots.png') repeat;
+    background: var(--maya-white) url('assets/shared/dots.png') repeat;
     mix-blend-mode: multiply;
     animation: floatSlow 14s ease-in-out infinite;
 }
@@ -320,66 +320,91 @@ h3 {
 
 
 @keyframes floatSlow {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  20% {
-    transform: translateY(-5px) rotate(-1deg);
-  }
-  40% {
-    transform: translateY(3px) rotate(1.5deg);
-  }
-  60% {
-    transform: translateY(-4px) rotate(0.5deg);
-  }
-  80% {
-    transform: translateY(2px) rotate(-0.5deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+
+    40% {
+        transform: translateY(3px) rotate(1.5deg);
+    }
+
+    60% {
+        transform: translateY(-4px) rotate(0.5deg);
+    }
+
+    80% {
+        transform: translateY(2px) rotate(-0.5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
+
 @keyframes paperLift {
-  0% {
-    transform: translateY(8px) rotate(-1.2deg) skewX(-0.4deg);
-  }
-  25% {
-    transform: translateY(-6px) rotate(1.4deg) skewX(0.3deg);
-  }
-  50% {
-    transform: translateY(3px) rotate(-0.6deg) skewX(-0.2deg);
-  }
-  75% {
-    transform: translateY(-4px) rotate(0.8deg) skewX(0.1deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg) skewX(0deg);
-  }
+    0% {
+        transform: translateY(8px) rotate(-1.2deg) skewX(-0.4deg);
+    }
+
+    25% {
+        transform: translateY(-6px) rotate(1.4deg) skewX(0.3deg);
+    }
+
+    50% {
+        transform: translateY(3px) rotate(-0.6deg) skewX(-0.2deg);
+    }
+
+    75% {
+        transform: translateY(-4px) rotate(0.8deg) skewX(0.1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg) skewX(0deg);
+    }
 }
+
 .section,
 .content,
 #projects,
 #experiences,
 #contact {
-  animation: paperLift 7s ease-in-out infinite alternate;
+    animation: paperLift 7s ease-in-out infinite alternate;
 }
+
 @keyframes headerFloat {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  30% {
-    transform: translateY(-8px) rotate(-1deg);
-  }
-  60% {
-    transform: translateY(5px) rotate(1deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    30% {
+        transform: translateY(-8px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translateY(5px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
+
 .header {
-  animation: headerFloat 5.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite alternate;
+    animation: headerFloat 5.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite alternate;
 }
-.section:nth-of-type(1) { animation-delay: 0s; }
-.section:nth-of-type(2) { animation-delay: 1.2s; }
-.section:nth-of-type(3) { animation-delay: 2.7s; }
+
+.section:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.section:nth-of-type(2) {
+    animation-delay: 1.2s;
+}
+
+.section:nth-of-type(3) {
+    animation-delay: 2.7s;
+}
