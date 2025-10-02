@@ -209,6 +209,22 @@ ul {
   }
 }
 
+/* white card behind about content */
+.about-card {
+  background: var(--maya-white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transform: rotate(-0.6deg) translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card {
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Accessibility: visible skip link */
 .skip-link {
   position: absolute;
