@@ -182,11 +182,13 @@ ul {
 }
 
 .gallery img {
+  /* fixed thumbnail width but preserve original aspect ratio (no cropping) */
   width: 150px;
-  height: 150px;
+  height: auto;
   border-radius: 5px;
   flex-shrink: 0;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #fff; /* subtle background for non-square images */
   transition: transform 180ms cubic-bezier(.2, .8, .2, 1);
   will-change: transform;
 }
@@ -194,6 +196,16 @@ ul {
 .gallery img:hover,
 .gallery img:focus {
   transform: rotate(-0.6deg) translateY(-4px);
+}
+
+/* Responsive/content images: keep full image visible and preserve aspect ratio */
+.content img,
+.content-box img,
+.gallery img,
+img.responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 #contact {
