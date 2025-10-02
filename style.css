@@ -261,7 +261,7 @@ ul {
 
 .gallery img {
   /* fixed thumbnail width but preserve original aspect ratio (no cropping) */
-  width: 150px;
+  width: 120px;
   height: auto;
   border-radius: 5px;
   flex-shrink: 0;
