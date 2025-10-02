@@ -209,6 +209,27 @@ ul {
   }
 }
 
+/* Accessibility: visible skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 8px 10px;
+  background: var(--maya-yellow);
+  color: var(--maya-dark);
+  border-radius: 4px;
+  z-index: 9999;
+}
+
 .header {
   animation: headerFloat 680ms cubic-bezier(0.22, 0.9, 0.3, 1) both;
   background-color: var(--maya-blue);
