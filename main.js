@@ -43,11 +43,15 @@ function setupFloatingIcons() {
         || document.querySelector('header')
         || document.getElementById('header-container');
 
-    if (headerWrapper && typeof headerWrapper.appendChild === 'function') {
-        headerWrapper.appendChild(iconsContainer);
+    // Prefer to attach icons to the inner .header element (which contains the H1 and subtitle)
+    const headerTarget = headerWrapper ? headerWrapper.querySelector('.header') : null;
+
+    const attachTarget = headerTarget || headerWrapper;
+
+    if (attachTarget && typeof attachTarget.appendChild === 'function') {
+        attachTarget.appendChild(iconsContainer);
     } else {
         // Do not append to body. Icons must stay in the header only.
-        // Log a warning for debugging if the header element isn't present.
         console.warn('Could not find a header element to attach icons; icons were not added.');
     }
 }

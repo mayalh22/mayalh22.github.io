@@ -414,6 +414,18 @@ ul {
   overflow: visible;
 }
 
+/* container for decorative icons positioned around the header text */
+.floating-icons {
+  position: absolute;
+  inset: 0; /* fill the header container */
+  pointer-events: none; /* allow clicks to pass through except icons themselves */
+}
+
+.floating-icons .decor-icon {
+  pointer-events: auto; /* allow hover and click on icons */
+  position: absolute;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px) rotate(0deg);
