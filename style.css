@@ -125,11 +125,11 @@ ul {
   }
 }
 
-.content,
-.section,
-.contact,
-#projects,
-#experiences {
+.content:hover,
+.section:hover,
+.contact:hover,
+#projects:hover,
+#experiences:hover {
   background-color: var(--maya-white);
   position: relative;
   z-index: 10;
@@ -137,21 +137,7 @@ ul {
   padding: 20px;
   transform: translateY(6px) rotate(-0.4deg) skewX(-0.12deg);
   animation: paperLift 650ms cubic-bezier(.2,.8,.25,1) both;
-}
 
-.section:nth-of-type(1),
-.content:nth-of-type(1) {
-  animation-delay: 80ms;
-}
-
-.section:nth-of-type(2),
-.content:nth-of-type(2) {
-  animation-delay: 160ms;
-}
-
-.section:nth-of-type(3),
-.content:nth-of-type(3) {
-  animation-delay: 240ms;
 }
 
 .content-box {
