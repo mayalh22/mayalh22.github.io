@@ -522,3 +522,11 @@ footer {
   transition: transform 200ms ease;
   cursor: pointer;
 }
+
+/* Ensure content images are shown fully (no cropping/zoom). Exclude decorative icons. */
+img:not(.decor-icon) {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
