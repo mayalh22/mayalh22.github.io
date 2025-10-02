@@ -37,9 +37,14 @@ function setupFloatingIcons() {
         img.alt = '';
         iconsContainer.appendChild(img);
     }
-    document.body.appendChild(iconsContainer);
+    const headerWrapper = document.querySelector('.header-area'); 
+    if (headerWrapper) {
+        headerWrapper.appendChild(iconsContainer);
+    } else {
+        document.body.appendChild(iconsContainer); 
+        console.error("Could not find .header-area to attach icons.");
 }
-
+}
 function setupIconInteractions() {
     const icons = document.querySelectorAll('.decor-icon');
 

@@ -403,54 +403,9 @@ ul {
   z-index: 1;
 }
 
-.icon1 {
-  top: 4%;
-  left: 2%;
-}
-
-.icon2 {
-  top: 8%;
-  right: 4%;
-}
-
-.icon3 {
-  top: 50%;
-  left: 1%;
-}
-
-.icon4 {
-  top: 75%;
-  right: 3%;
-}
-
-.icon5 {
-  bottom: 8%;
-  left: 8%;
-}
-
-.icon6 {
-  bottom: 16%;
-  right: 10%;
-}
-
-.icon7 {
-  top: 25%;
-  left: 82%;
-}
-
-.icon8 {
-  bottom: 4%;
-  left: 45%;
-}
-
-.icon9 {
-  top: 20%;
-  right: 40%;
-}
-
-.icon10 {
-  bottom: 10%;
-  right: 30%;
+.header-area {
+  position: relative;
+  overflow: visible;
 }
 
 @keyframes float {
@@ -481,6 +436,63 @@ footer {
   to {
     transform: rotate(360deg);
   }
+}
+.icon1 {
+  top: 10px;
+  left: 10px;
+}
+
+.icon2 {
+  top: 20px;
+  right: 10px;
+}
+
+.icon3 {
+  bottom: 10px;
+  left: 20%;
+}
+
+.icon4 {
+  bottom: 10px;
+  right: 20%;
+}
+
+.icon5 {
+  top: 60%;
+  left: -20px;
+}
+
+.icon6 {
+  top: 60%;
+  right: -20px;
+}
+
+.icon7 {
+  top: -15px;
+  left: 45%;
+}
+
+.icon8 {
+  bottom: -15px;
+  left: 50%;
+}
+
+.icon9 {
+  top: 50px;
+  left: 10%;
+}
+
+.icon10 {
+  top: 50px;
+  right: 10%;
+}
+
+.decor-icon {
+  position: absolute;
+  width: 60px;
+  opacity: 0.9;
+  animation: float 10s ease-in-out infinite alternate;
+  z-index: 1;
 }
 
 .decor-icon:hover {
