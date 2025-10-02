@@ -396,3 +396,36 @@ ul {
     transition: none !important;
   }
 }
+
+.floating-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decor-icon {
+    position: absolute;
+    width: 40px;
+    opacity: 0.8;
+    animation: float 10s ease-in-out infinite alternate;
+}
+
+.icon1 { top: 5%; left: 3%; }
+.icon2 { top: 15%; right: 5%; }
+.icon3 { top: 50%; left: 0%; }
+.icon4 { top: 75%; right: 2%; }
+.icon5 { bottom: 10%; left: 10%; }
+.icon6 { bottom: 20%; right: 15%; }
+.icon7 { top: 30%; left: 80%; }
+.icon8 { bottom: 0; left: 50%; }
+.icon9 { top: 20%; right: 45%; }
+.icon10 { bottom: 5%; right: 40%; }
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-10px) rotate(5deg); }
+}
