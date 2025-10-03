@@ -152,32 +152,9 @@ ul {
   max-width: 900px;
 }
 
-/* About grid: avatar + bio */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-.about-no-avatar .about-bio {
-  max-width: 780px;
-  margin: 0 auto;
-}
-
 .about-bio h2 {
   margin-top: 0;
   position: relative;
-}
-
-.about-bio h2::after {
-  /* subtle washi-like underline using a soft gradient */
-  content: '';
-  display: block;
-  height: 8px;
-  width: 70px;
-  background: linear-gradient(90deg, rgba(245,220,121,0.95), rgba(255,152,99,0.9));
-  border-radius: 4px;
-  margin-top: 8px;
 }
 
 .lead {
@@ -201,38 +178,12 @@ ul {
 
 @media (min-width: 721px) {
   .about-grid {
-    grid-template-columns: 1fr 560px;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
+
   .about-bio {
-    padding-left: 12px;
+    padding-left: 0;
   }
-}
-
-/* When there is no avatar, keep the about section as a single column
-   so the bio fills the card rather than splitting into two columns. */
-.about-grid.about-no-avatar,
-.about-no-avatar.about-grid {
-  grid-template-columns: 1fr !important;
-}
-
-.about-no-avatar .about-card {
-  max-width: 100%;
-}
-
-.about-no-avatar .about-bio {
-  max-width: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-/* white card behind about content */
-.about-card {
-  background: var(--maya-white);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transform: rotate(-0.6deg) translateY(-4px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -242,7 +193,6 @@ ul {
   }
 }
 
-/* Accessibility: visible skip link */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -309,7 +259,6 @@ ul {
   transform: rotate(-0.6deg) translateY(-4px);
 }
 
-/* Responsive/content images: keep full image visible and preserve aspect ratio */
 .content img,
 .content-box img,
 .gallery img,
@@ -537,15 +486,14 @@ img.responsive {
   overflow: visible;
 }
 
-/* container for decorative icons positioned around the header text */
 .floating-icons {
   position: absolute;
-  inset: 0; /* fill the header container */
-  pointer-events: none; /* allow clicks to pass through except icons themselves */
+  inset: 0; 
+  pointer-events: none; 
 }
 
 .floating-icons .decor-icon {
-  pointer-events: auto; /* allow hover and click on icons */
+  pointer-events: auto;
   position: absolute;
 }
 
@@ -634,10 +582,20 @@ footer {
   cursor: pointer;
 }
 
-/* Ensure content images are shown fully (no cropping/zoom). Exclude decorative icons. */
 img:not(.decor-icon) {
   max-width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
+}
+
+.art-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  background-color: #fff;
+  flex: 0 0 auto;
+  transition: transform 180ms ease;
 }
