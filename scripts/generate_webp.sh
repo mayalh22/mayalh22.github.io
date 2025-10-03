@@ -1,12 +1,6 @@
-#!/usr/bin/env bash
-# generate_webp.sh
-# Helper script to create responsive WebP + resized PNG fallbacks for art and favorites.
-# Usage: ./scripts/generate_webp.sh
-# Requires: imagemagick (convert) and cwebp (from webp package)
 
 set -euo pipefail
 
-# directories to process
 SRC_DIRS=("assets/art" "assets/favorites")
 SIZES=(480 768 1200)
 QUALITY=80
@@ -24,10 +18,8 @@ for dir in "${SRC_DIRS[@]}"; do
 
     echo "Processing $img"
 
-    # create webp original size
     cwebp -q $QUALITY "$img" -o "$dir/$name.webp" >/dev/null
 
-    # create resized png and webp variants
     for s in "${SIZES[@]}"; do
       outpng="$dir/${name}-${s}.png"
       outwebp="$dir/${name}-${s}.webp"
