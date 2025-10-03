@@ -1,1 +1,67 @@
-document.addEventListener('DOMContentLoaded',init);async function init(){try{const res=await fetch('header.html');if(!res.ok)throw new Error('Failed to load header');document.getElementById('header-container').innerHTML=await res.text();highlightActiveNav();setupFloatingIcons();setupIconInteractions();const y=new Date().getFullYear();const yearEl=document.getElementById('year');if(yearEl)yearEl.textContent=y}catch(err){console.error('Header load error:',err)}}function highlightActiveNav(){const current=(window.location.pathname.split('/').pop()||'index.html');document.querySelectorAll('.nav-buttons a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===current))}function setupFloatingIcons(){const frag=document.createDocumentFragment();for(let i=1;i<=10;i++){const img=document.createElement('img');img.src=`assets/shared/icon${i}.png`;img.className=`decor-icon icon${i}`;img.alt='';frag.appendChild(img)}const container=document.createElement('div');container.className='floating-icons';container.appendChild(frag);const headerWrapper=document.querySelector('.header-area')||document.querySelector('#header')||document.querySelector('header')||document.getElementById('header-container');const attach=headerWrapper?.querySelector('.header')||headerWrapper;if(attach?.appendChild)attach.appendChild(container);else console.warn('Could not find a header element to attach icons; icons were not added.')}function setupIconInteractions(){document.addEventListener('click',e=>{const t=e.target;if(t.classList&&t.classList.contains('decor-icon')){t.classList.add('pressed');setTimeout(()=>t.classList.remove('pressed'),200)}})}
+document.addEventListener('DOMContentLoaded', init);
+
+async function init() {
+  try {
+    const res = await fetch('header.html');
+    if (!res.ok) throw new Error('Failed to load header');
+
+    document.getElementById('header-container').innerHTML = await res.text();
+
+    highlightActiveNav();
+    setupFloatingIcons();
+    setupIconInteractions();
+
+    const y = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = y;
+  } catch (err) {
+    console.error('Header load error:', err);
+  }
+}
+
+function highlightActiveNav() {
+  const current = (window.location.pathname.split('/').pop() || 'index.html');
+  document.querySelectorAll('.nav-buttons a').forEach(a =>
+    a.classList.toggle('active', a.getAttribute('href') === current)
+  );
+}
+
+function setupFloatingIcons() {
+  const frag = document.createDocumentFragment();
+
+  for (let i = 1; i <= 10; i++) {
+    const img = document.createElement('img');
+    img.src = `assets/shared/icon${i}.png`;
+    img.className = `decor-icon icon${i}`;
+    img.alt = '';
+    frag.appendChild(img);
+  }
+
+  const container = document.createElement('div');
+  container.className = 'floating-icons';
+  container.appendChild(frag);
+
+  const headerWrapper =
+    document.querySelector('.header-area') ||
+    document.querySelector('#header') ||
+    document.querySelector('header') ||
+    document.getElementById('header-container');
+
+  const attach = headerWrapper?.querySelector('.header') || headerWrapper;
+
+  if (attach?.appendChild) {
+    attach.appendChild(container);
+  } else {
+    console.warn('Could not find a header element to attach icons; icons were not added.');
+  }
+}
+
+function setupIconInteractions() {
+  document.addEventListener('click', e => {
+    const t = e.target;
+    if (t.classList && t.classList.contains('decor-icon')) {
+      t.classList.add('pressed');
+      setTimeout(() => t.classList.remove('pressed'), 200);
+    }
+  });
+}
