@@ -10,6 +10,7 @@ async function init() {
     highlightActiveNav();
     setupFloatingIcons();
     setupIconInteractions();
+    setupLightbox();
 
     const y = new Date().getFullYear();
     const yearEl = document.getElementById('year');
@@ -65,3 +66,48 @@ function setupIconInteractions() {
     }
   });
 }
+
+function setupLightbox() {
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Close lightbox">×</button>
+    <div class="lightbox-content">
+      <img src="" alt="">
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('.lightbox-content img');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupLightbox();
+});
