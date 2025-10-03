@@ -664,3 +664,17 @@ img:not(.decor-icon) {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+.project-links a {
+  display: block; 
+  background-color: var(--maya-blue);
+  color: var(--maya-dark);
+  padding: 8px 16px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 200ms ease;
+  width: fit-content;
+}
