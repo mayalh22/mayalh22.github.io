@@ -11,6 +11,7 @@ async function init() {
     setupFloatingIcons();
     setupIconInteractions();
     setupLightbox();
+    setupDarkMode(); // ADD THIS LINE
 
     const y = new Date().getFullYear();
     const yearEl = document.getElementById('year');
@@ -19,7 +20,6 @@ async function init() {
     console.error('Header load error:', err);
   }
 }
-
 function highlightActiveNav() {
   const current = (window.location.pathname.split('/').pop() || 'index.html');
   document.querySelectorAll('.nav-buttons a').forEach(a =>
@@ -110,4 +110,26 @@ function setupLightbox() {
 
 document.addEventListener('DOMContentLoaded', () => {
   setupLightbox();
+});
+
+function setupDarkMode() {
+  const toggleBtn = document.createElement('button');
+  toggleBtn.className = 'dark-mode-toggle';
+  toggleBtn.setAttribute('aria-label', 'Toggle dark mode');
+  toggleBtn.innerHTML = '🌙';
+  document.body.appendChild(toggleBtn);
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    if (document.body.classList.contains('dark-mode')) {
+      toggleBtn.innerHTML = '☀️';
+    } else {
+      toggleBtn.innerHTML = '🌙';
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupDarkMode();
 });
