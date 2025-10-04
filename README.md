@@ -1,31 +1,25 @@
-# Maya Hazarika - Personal Website & Portfolio
+# Maya Hazarika Personal Website & Portfolio
 
-Hello! My name is Maya and this is my personal website showcasing my projects, art, writing, and experiences as a 10th grader in the Boston area.
-
-About
-
-I created this site as a digital resume and diary of my interests and work. It features a scrapbook-inspired design meant to feel analog and non-digital, with a soft color palette and playful interactions.
+Hello! My name is Maya and this is my personal website showcasing my projects, art, writing, and experiences as a 10th grader in the Boston area. I created this site as a digital resume and diary of my interests and work. It features a scrapbook-inspired design meant to feel analog and non-digital, with a soft color palette and playful interactions.
 
 Pages
 
-- **About Me** - Introduction and bio
-- **Contact** - Ways to reach me (email, Instagram, LinkedIn, GitHub)
-- **What I Do** - Volunteering, jobs, school activities, and summer programs
-- **My Art** - Ceramics and paintings gallery with lightbox viewer
-- **Projects** - Showcase of programming projects with live demos and code
-- **Writing** - Creative writing pieces and published articles
-- **Favorites** - Books, music, and movies I love
+About Me = Introduction and bio
+Contact = ways to reach me (email, Instagram, LinkedIn, GitHub)
+What I Do = volunteering, jobs, school activities, and summer programs
+My Art = ceramics and paintings gallery with lightbox viewer
+Projects = programming projects with live demos and code
+Writing = creative writing pieces and published articles
+Favorites = books, music, and movies I love
 
-Tech
-
-- **HTML5** - Structure and content
-- **CSS3** - Styling with custom properties, animations, and responsive design
-- **JavaScript (ES6+)** - Interactive features and dynamic content loading
-- **Fonts** - Google Fonts (Delius, SUSE Mono)
+HTML5 Structure and content
+CSS3 Styling with custom properties, animations, and responsive design
+JavaScript (ES6+) Interactive features and dynamic content loading
+Fonts Google Fonts (Delius, SUSE Mono)
+Copilot for debugging!
 
 Design
-
-I spent a lot of time deciding the color palette:
+I spent a lot of time deciding the color palette, editing icons and favicon and images:
 
 --maya-green: #97c026
 --maya-blue: #aad3df
@@ -34,14 +28,6 @@ I spent a lot of time deciding the color palette:
 --maya-yellow: #f5dc79
 --maya-dark: #434343
 --maya-white: #ffffff
-
-Features include:
-
-Floating decorative icons that spin on hover
-Paper-lift animations on content boxes
-Image lightbox for art gallery
-Responsive navigation that works on desktop and mobile
-Accessibility considerations (focus states, reduced motion support)
 
 File Structure
 .
