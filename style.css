@@ -776,3 +776,34 @@ body.dark-mode .project-links a:hover {
 body.dark-mode .dark-mode-toggle {
   background-color: var(--maya-blue);
 }
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.art-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.art-grid img:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.coming-soon {
+  font-style: italic;
+  color: var(--maya-blue);
+  background-color: rgba(170, 211, 223, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--maya-blue);
+}

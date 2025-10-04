@@ -11,7 +11,7 @@ async function init() {
     setupFloatingIcons();
     setupIconInteractions();
     setupLightbox();
-    setupDarkMode(); // ADD THIS LINE
+    setupDarkMode();
 
     const y = new Date().getFullYear();
     const yearEl = document.getElementById('year');
