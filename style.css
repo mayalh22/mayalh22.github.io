@@ -825,7 +825,6 @@ body.dark-mode .dark-mode-toggle {
 
 .favorites-grid {
   grid-template-columns: repeat(auto-fill, 180px);
-
   display: grid;
   gap: 25px;
   margin: 25px 0 40px 0;
