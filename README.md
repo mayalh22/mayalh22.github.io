@@ -30,3 +30,4 @@ I spent a lot of time deciding the color palette, editing icons and favicon and 
 --maya-white: #ffffff
 
 Feel free to work on this on your own! I don't know why you would, but you can.
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
