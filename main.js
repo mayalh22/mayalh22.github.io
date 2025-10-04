@@ -116,16 +116,16 @@ function setupDarkMode() {
   const toggleBtn = document.createElement('button');
   toggleBtn.className = 'dark-mode-toggle';
   toggleBtn.setAttribute('aria-label', 'Toggle dark mode');
-  toggleBtn.innerHTML = '🌙';
+  toggleBtn.innerHTML = 'D';
   document.body.appendChild(toggleBtn);
 
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     
     if (document.body.classList.contains('dark-mode')) {
-      toggleBtn.innerHTML = '☀️';
+      toggleBtn.innerHTML = 'L';
     } else {
-      toggleBtn.innerHTML = '🌙';
+      toggleBtn.innerHTML = 'D';
     }
   });
 }
