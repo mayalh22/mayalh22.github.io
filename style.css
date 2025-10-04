@@ -807,3 +807,35 @@ body.dark-mode .dark-mode-toggle {
   border-radius: 8px;
   border-left: 4px solid var(--maya-blue);
 }
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 25px;
+  margin: 25px 0 40px 0;
+}
+
+.favorite-item {
+  text-align: center;
+}
+
+.favorite-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
+}
+
+.favorite-item img:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.favorite-title {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--maya-dark);
+  font-weight: 600;
+}
