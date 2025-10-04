@@ -29,23 +29,4 @@ I spent a lot of time deciding the color palette, editing icons and favicon and 
 --maya-dark: #434343
 --maya-white: #ffffff
 
-File Structure
-.
-├── index.html              # Home page
-├── contact.html            # Contact information
-├── what-i-do.html         # Activities and experiences
-├── art.html               # Art gallery
-├── projects.html          # Project showcase
-├── writing.html           # Writing samples
-├── favorites.html         # Personal favorites
-├── 404.html               # Error page
-├── header.html            # Shared header component
-├── style.css              # Main stylesheet
-├── main.js                # JavaScript functionality
-└── assets/
-    ├── shared/            # Icons, favicon, background texture
-    ├── art/               # Artwork images
-    ├── favorites/         # Book/music/movie covers
-    └── projects/          # Project screenshots
-
 Feel free to work on this on your own! I don't know why you would, but you can.
