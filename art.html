@@ -2,45 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Art - Maya Hazarika</title>
-    <link rel="icon" href="assets/shared/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css?v=3" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View Maya's ceramic and painting artwork created over the past few years.">
+    <meta name="theme-color" content="#97c026">
+    <title>My Art – Maya Hazarika</title>
+    <link rel="icon" href="assets/shared/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://mayalh22.github.io/art.html">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
     <div id="header-container"></div>
-    <div class="content-box">
-        <div class="content">
 
-            <h2>My Art</h2>
-            <p>I create art through ceramics and painting. Here's a collection of pieces I've made over the past few years.</p>
+    <main class="content-box">
+        <section class="content">
+            <article id="art" class="section">
+                <h1>My Art</h1>
+                <p>
+                    I create art through ceramics and painting. Here's a collection of pieces 
+                    I've made over the past few years. Click any image to view it in detail.
+                </p>
 
-            <h3>Paintings</h3>
-            <div class="art-grid">
-                <img src="assets/art/painting1.png" alt="Painting 1" loading="lazy">
-                <img src="assets/art/painting2.png" alt="Painting 2" loading="lazy">
-                <img src="assets/art/painting3.png" alt="Painting 3" loading="lazy">
-                <img src="assets/art/painting4.png" alt="Painting 4" loading="lazy">
-                <img src="assets/art/painting5.png" alt="Painting 5" loading="lazy">
-                <img src="assets/art/painting6.png" alt="Painting 6" loading="lazy">
-                <img src="assets/art/painting7.png" alt="Painting 7" loading="lazy">
-                <img src="assets/art/painting8.png" alt="Painting 8" loading="lazy">
-                <img src="assets/art/painting9.png" alt="Painting 9" loading="lazy">
-                <img src="assets/art/painting10.png" alt="Painting 10" loading="lazy">
-                <img src="assets/art/painting11.png" alt="Painting 11" loading="lazy">
-                <img src="assets/art/painting12.png" alt="Painting 12" loading="lazy">
-            </div>
+                <section class="art-category">
+                    <h2>Paintings</h2>
+                    <div class="art-grid">
+                        <img src="assets/art/painting1.png" alt="Abstract painting 1 by Maya" loading="lazy">
+                        <img src="assets/art/painting2.png" alt="Abstract painting 2 by Maya" loading="lazy">
+                        <img src="assets/art/painting3.png" alt="Abstract painting 3 by Maya" loading="lazy">
+                        <img src="assets/art/painting4.png" alt="Abstract painting 4 by Maya" loading="lazy">
+                        <img src="assets/art/painting5.png" alt="Abstract painting 5 by Maya" loading="lazy">
+                        <img src="assets/art/painting6.png" alt="Abstract painting 6 by Maya" loading="lazy">
+                        <img src="assets/art/painting7.png" alt="Abstract painting 7 by Maya" loading="lazy">
+                        <img src="assets/art/painting8.png" alt="Abstract painting 8 by Maya" loading="lazy">
+                        <img src="assets/art/painting9.png" alt="Abstract painting 9 by Maya" loading="lazy">
+                        <img src="assets/art/painting10.png" alt="Abstract painting 10 by Maya" loading="lazy">
+                        <img src="assets/art/painting11.png" alt="Abstract painting 11 by Maya" loading="lazy">
+                        <img src="assets/art/painting12.png" alt="Abstract painting 12 by Maya" loading="lazy">
+                    </div>
+                </section>
 
-            <h3>Ceramics</h3>
-            <p class="coming-soon">Ceramics photos coming soon! I'm working on photographing my pieces.</p>
-        </div>
-    </div>
+                <section class="art-category">
+                    <h2>Ceramics</h2>
+                    <p class="coming-soon">
+                        Ceramics photos coming soon! I'm currently working on photographing my pieces 
+                        to showcase them here.
+                    </p>
+                </section>
+            </article>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Maya Hazarika. All rights reserved.</p>
+        <p>&copy; <span id="year">2025</span> Maya Hazarika. All rights reserved.</p>
     </footer>
-    <script src="main.js"></script>
+
+    <script src="main.js" defer></script>
 </body>
 
 </html>

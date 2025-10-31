@@ -1,54 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>404 – Page Not Found</title>
-  <link rel="icon" href="assets/shared/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css?v=3" />
-  <style>
-    .not-found {
-      max-width: 600px;
-      margin: 80px auto;
-      text-align: center;
-      padding: 40px;
-      background-color: var(--maya-white);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-    .not-found h1 {
-      font-size: 4rem;
-      color: var(--maya-pink);
-    }
-    .not-found p {
-      font-size: 1.25rem;
-      margin-bottom: 30px;
-    }
-    .not-found a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: var(--maya-blue);
-      color: var(--maya-dark);
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .not-found a:hover {
-      background-color: var(--maya-green);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found. Let me help you find what you're looking for.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#97c026">
+    <title>Page Not Found (404) – Maya Hazarika</title>
+    <link rel="icon" href="assets/shared/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://mayalh22.github.io/404.html">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .not-found {
+            max-width: 600px;
+            margin: 80px auto;
+            text-align: center;
+            padding: 40px;
+            background-color: var(--maya-white);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            animation: slideIn 500ms ease-out;
+        }
+
+        .not-found h1 {
+            font-size: 4rem;
+            color: var(--maya-pink);
+            margin: 0 0 0.5rem 0;
+            font-family: 'Delius', cursive;
+        }
+
+        .not-found h2 {
+            font-size: 1.5rem;
+            color: var(--maya-dark);
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .not-found p {
+            font-size: 1.1rem;
+            margin: 1.5rem 0 2rem 0;
+            color: var(--maya-dark);
+            line-height: 1.6;
+        }
+
+        .not-found-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .not-found a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--maya-blue);
+            color: var(--maya-dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 200ms ease;
+            cursor: pointer;
+        }
+
+        .not-found a:hover {
+            background-color: var(--maya-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .not-found a:focus {
+            outline: 3px dashed rgba(170, 211, 223, 0.45);
+            outline-offset: 4px;
+        }
+
+        .not-found a.secondary {
+            background-color: var(--maya-yellow);
+            font-size: 0.95rem;
+        }
+
+        .not-found a.secondary:hover {
+            background-color: var(--maya-orange);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body.dark-mode .not-found {
+            background-color: #2a2a2a;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        body.dark-mode .not-found h2,
+        body.dark-mode .not-found p {
+            color: #e0e0e0;
+        }
+
+        @media (max-width: 600px) {
+            .not-found {
+                margin: 40px 20px;
+                padding: 30px 20px;
+            }
+
+            .not-found h1 {
+                font-size: 3rem;
+            }
+
+            .not-found h2 {
+                font-size: 1.25rem;
+            }
+
+            .not-found-links {
+                flex-direction: column;
+            }
+
+            .not-found a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="not-found">
-    <h1>404</h1>
-    <p>Oops! The page you're looking for doesn't exist.</p>
-    <a href="index.html">Go back home</a>
-  </div>
-  <script src="main.js"></script>
-  <footer>
-    <p>&copy; 2025 Maya Hazarika. All rights reserved.</p>
-  </footer>
+    <main class="not-found">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>
+            Oops! The page you're looking for doesn't exist or may have been moved. 
+            No worries—let me help you find your way back.
+        </p>
+        <nav class="not-found-links">
+            <a href="index.html">← Go Back Home</a>
+            <a href="projects.html" class="secondary">View My Projects</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year">2025</span> Maya Hazarika. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js" defer></script>
 </body>
+
 </html>
