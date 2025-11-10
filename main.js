@@ -24,6 +24,7 @@ async function init() {
 
     highlightActiveNav();
     setupFloatingIcons();
+    animateFloatingIcons();
     setupIconInteractions();
     setupLightbox();
     setupDarkMode();
@@ -67,6 +68,21 @@ function setupFloatingIcons() {
   }
 
   attach.appendChild(container);
+}
+
+function animateFloatingIcons() {
+  const icons = document.querySelectorAll('.decor-icon');
+  
+  icons.forEach((icon, index) => {
+    const delay = index * 0.1;
+    const duration = 3 + Math.random() * 2;
+    const distance = 8 + Math.random() * 4;
+    const rotation = 2 + Math.random() * 4;
+    
+    icon.style.animation = `floatIcon ${duration}s ease-in-out ${delay}s infinite`;
+    icon.style.setProperty('--float-distance', `${distance}px`);
+    icon.style.setProperty('--float-rotation', `${rotation}deg`);
+  });
 }
 
 function setupIconInteractions() {
@@ -124,7 +140,6 @@ function setupLightbox() {
 }
 
 function setupDarkMode() {
-  // Create container for both controls
   const controlsContainer = document.createElement('div');
   controlsContainer.className = 'controls-container';
   

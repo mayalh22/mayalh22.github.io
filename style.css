@@ -703,3 +703,10 @@ body.dark-mode .font-size-control select { color: #e0e0e0; background-color: #22
   .favorites-grid { grid-template-columns: repeat(auto-fill, 150px); }
   .controls-container { bottom: 15px; right: 15px; gap: 8px; }
 }
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(calc(var(--float-distance) * -1)) rotate(calc(var(--float-rotation) * -1)); }
+  50% { transform: translateY(var(--float-distance)) rotate(var(--float-rotation)); }
+  75% { transform: translateY(calc(var(--float-distance) * -0.5)) rotate(calc(var(--float-rotation) * -0.5)); }
+}
