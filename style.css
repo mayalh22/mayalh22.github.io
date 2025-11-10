@@ -915,3 +915,26 @@ body.dark-mode .font-size-control select {
   background-color: #222;
   border-color: #666;
 }
+/* Controls Container */
+.controls-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.dark-mode-toggle {
+  position: static;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .controls-container {
+    bottom: 15px;
+    right: 15px;
+    gap: 8px;
+  }
+}

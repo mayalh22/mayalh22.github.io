@@ -124,11 +124,14 @@ function setupLightbox() {
 }
 
 function setupDarkMode() {
+  // Create container for both controls
+  const controlsContainer = document.createElement('div');
+  controlsContainer.className = 'controls-container';
+  
   const toggleBtn = document.createElement('button');
   toggleBtn.className = 'dark-mode-toggle';
   toggleBtn.setAttribute('aria-label', 'Toggle dark mode');
   toggleBtn.textContent = 'D';
-  document.body.appendChild(toggleBtn);
 
   const savedMode = localStorage.getItem('dark-mode');
   if (savedMode === 'enabled') {
@@ -142,6 +145,9 @@ function setupDarkMode() {
     toggleBtn.textContent = isDark ? 'L' : 'D';
     localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
   });
+
+  controlsContainer.appendChild(toggleBtn);
+  document.body.appendChild(controlsContainer);
 }
 
 function updateYear() {
