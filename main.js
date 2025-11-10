@@ -174,6 +174,13 @@ function setupDarkMode() {
   });
 
   controlsContainer.appendChild(toggleBtn);
+
+  // Move font size control to controls container
+  const fontSizeControl = document.querySelector('.font-size-control');
+  if (fontSizeControl) {
+    controlsContainer.appendChild(fontSizeControl);
+  }
+
   document.body.appendChild(controlsContainer);
 }
 
