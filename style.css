@@ -8,7 +8,8 @@
   --maya-yellow: #f5dc79;
   --maya-dark: #434343;
   --maya-white: #ffffff;
-  --base-font-size: 16px;
+  /* FIX 1: Set default font size to 20px to match the 'Default' selection in header.html, ensuring immediate consistency. */
+  --base-font-size: 20px;
   --h1-size: 2.75rem;
   --h2-size: 1.75rem;
   --h3-size: 1.25rem;
@@ -21,6 +22,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'SUSE Mono', monospace;
+  /* Font size is now consistently controlled by this variable, which JS updates. */
   font-size: var(--base-font-size);
   line-height: 1.5;
   margin: 0;
@@ -110,7 +112,8 @@ ul { line-height: 1.6; padding-left: 20px; }
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  transition: transform 90ms linear, filter 200ms ease, background-color 200ms ease;
+  /* UX FIX 2: Added color transition and slightly increased background-color transition for smoother navigation clicks. */
+  transition: transform 90ms linear, filter 200ms ease, background-color 300ms ease, color 300ms ease;
   will-change: transform;
   text-decoration: none;
   color: inherit;
@@ -300,7 +303,8 @@ img:not(.decor-icon) {
   position: relative;
   max-width: 90%;
   max-height: 90vh;
-  animation: zoomIn 250ms ease;
+  /* UX FIX 3: Increased zoomIn duration to 300ms for a less jarring, smoother feel. */
+  animation: zoomIn 300ms ease;
 }
 
 .lightbox-content img {
