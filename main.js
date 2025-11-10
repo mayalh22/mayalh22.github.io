@@ -7,6 +7,21 @@ async function init() {
 
     document.getElementById('header-container').innerHTML = await res.text();
 
+    // Font size setup
+    const select = document.getElementById("font-size-select");
+    if (select) {
+      const savedSize = localStorage.getItem("preferredFontSize");
+      if (savedSize) {
+        document.documentElement.style.setProperty("--base-font-size", savedSize);
+        select.value = savedSize;
+      }
+      select.addEventListener("change", (e) => {
+        const size = e.target.value;
+        document.documentElement.style.setProperty("--base-font-size", size);
+        localStorage.setItem("preferredFontSize", size);
+      });
+    }
+
     highlightActiveNav();
     setupFloatingIcons();
     setupIconInteractions();
@@ -46,7 +61,7 @@ function setupFloatingIcons() {
     const img = document.createElement('img');
     img.src = `assets/shared/icon${i}.png`;
     img.className = `decor-icon icon${i}`;
-    img.alt = ''; // Decorative icon
+    img.alt = '';
     img.loading = 'lazy';
     container.appendChild(img);
   }
@@ -84,7 +99,6 @@ function setupLightbox() {
     document.body.style.overflow = '';
   }
 
-  // Open lightbox on gallery image click
   document.querySelectorAll('.gallery img').forEach(img => {
     img.style.cursor = 'pointer';
     img.addEventListener('click', () => {
@@ -92,19 +106,16 @@ function setupLightbox() {
       lightboxImg.alt = img.alt || 'Gallery image';
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
-      closeBtn.focus(); // Move focus to close button
+      closeBtn.focus();
     });
   });
 
-  // Close on button click
   closeBtn.addEventListener('click', closeLightbox);
 
-  // Close on background click
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  // Close on Escape key
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
@@ -139,21 +150,3 @@ function updateYear() {
     yearEl.textContent = new Date().getFullYear();
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("font-size-select");
-
-  // Load saved size
-  const savedSize = localStorage.getItem("preferredFontSize");
-  if (savedSize) {
-    document.documentElement.style.setProperty("--base-font-size", savedSize);
-    select.value = savedSize;
-  }
-
-  // Handle changes
-  select.addEventListener("change", (e) => {
-    const size = e.target.value;
-    document.documentElement.style.setProperty("--base-font-size", size);
-    localStorage.setItem("preferredFontSize", size);
-  });
-});
