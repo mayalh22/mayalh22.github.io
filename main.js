@@ -139,3 +139,21 @@ function updateYear() {
     yearEl.textContent = new Date().getFullYear();
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("font-size-select");
+
+  // Load saved size
+  const savedSize = localStorage.getItem("preferredFontSize");
+  if (savedSize) {
+    document.documentElement.style.setProperty("--base-font-size", savedSize);
+    select.value = savedSize;
+  }
+
+  // Handle changes
+  select.addEventListener("change", (e) => {
+    const size = e.target.value;
+    document.documentElement.style.setProperty("--base-font-size", size);
+    localStorage.setItem("preferredFontSize", size);
+  });
+});

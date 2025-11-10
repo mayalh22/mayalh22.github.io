@@ -871,3 +871,47 @@ body.dark-mode .dark-mode-toggle {
     grid-template-columns: repeat(auto-fill, 150px);
   }
 }
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--maya-yellow);
+  padding: 10px;
+  font-family: 'Delius', cursive;
+  border-bottom: 2px solid var(--maya-pink);
+}
+
+.font-size-control label {
+  color: var(--maya-dark);
+  font-weight: 600;
+}
+
+.font-size-control select {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--maya-dark);
+  font-family: 'SUSE Mono', monospace;
+  background-color: var(--maya-white);
+  color: var(--maya-dark);
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 100ms ease;
+}
+
+.font-size-control select:hover {
+  background-color: var(--maya-blue);
+  transform: translateY(-1px);
+}
+
+body.dark-mode .font-size-control {
+  background-color: #333;
+  border-bottom-color: #666;
+}
+
+body.dark-mode .font-size-control label,
+body.dark-mode .font-size-control select {
+  color: #e0e0e0;
+  background-color: #222;
+  border-color: #666;
+}
