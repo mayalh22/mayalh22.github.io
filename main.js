@@ -5,7 +5,24 @@ async function init() {
     const res = await fetch('header.html');
     if (!res.ok) throw new Error('Failed to load header');
 
-    document.getElementById('header-container').innerHTML = await res.text();
+    // **FIXED:** Changed to target a reliable container. 
+    // Assuming the script runs on an index.html with a <div id="header-container"></div>
+    // or directly append the loaded header content to the body or a main wrapper.
+    // For this fix, I'll assume there is a main wrapper or body tag to append to.
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        headerContainer.innerHTML = await res.text();
+    } else {
+        // Fallback: This is less ideal but ensures content appears if the container ID is missing
+        console.warn('Could not find #header-container. Appending header content to body.');
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = await res.text();
+        // Move children from tempDiv to body
+        while (tempDiv.firstChild) {
+            document.body.appendChild(tempDiv.firstChild);
+        }
+    }
+
 
     // Font size setup
     const select = document.getElementById("font-size-select");
